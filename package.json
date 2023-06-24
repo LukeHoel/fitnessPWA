@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build:prod": "ng build --deploy-url fitnessPWA/"
+    "build:prod": "ng build --base-href /fitnessPWA/"
   },
   "private": true,
   "dependencies": {
