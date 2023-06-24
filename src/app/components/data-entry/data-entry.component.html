@@ -1,4 +1,4 @@
-<button (click)="save()">Save</button>
+<a [routerLink]="['/']">Go To Stats View</a>
 
 <div *ngFor="let statCatgegory of statCategories">
     <h3>{{statCatgegory.name}}</h3>
@@ -9,3 +9,5 @@
         </div>
     </ng-container>
 </div>
+
+<button (click)="save()">Save</button>
