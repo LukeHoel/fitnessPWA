@@ -39,7 +39,7 @@ export class StatsService {
       { categoryId: 'body-composition', id: 'body-fat', name: 'Body Fat (%)', goodValue: 10, badValue: 25,lowerIsBetter: true },
       { categoryId: 'body-composition', id: 'ffmi', name: 'Fat Free Mass Index (ffmi)', goodValue: 23, badValue: 16, lowerIsBetter: false },
       // Flexibility
-      { categoryId: 'flexibility', id: 'sit-and-reach', name: 'Sit and Reach (cm)', goodValue: 40, badValue: 0, lowerIsBetter: false },
+      { categoryId: 'flexibility', id: 'sit-and-reach', name: 'Sit and Reach (cm)', goodValue: 40, badValue: 23, lowerIsBetter: false },
       // Agility
       { categoryId: 'agility', id: 'jump-height', name: 'Jump Height (cm)', goodValue: 60, badValue: 21, lowerIsBetter: false }
     ]
