@@ -1,1 +1,28 @@
-{{statValues|json}}
+<h2>Overview</h2>
+
+<button (click)="showGeneralizedRadar = !showGeneralizedRadar; setRadarValues()">Show {{showGeneralizedRadar ? 'Granular' : 'Generalized'}} Values</button>
+
+<div class="chartContainer">
+    <canvas baseChart
+        [datasets]="radarChartDatasets"
+        [options]="radarChartOptions"
+        [labels]="radarChartLabels"
+        [type]="'radar'"
+        [legend]="false">
+    </canvas>
+</div>
+
+
+<h2>Feats</h2>
+<ul *ngFor="let statCatgegory of statCategories">
+    <li>
+        {{statCatgegory.name}}
+        <ul>
+            <ng-container *ngFor="let stat of stats">
+                <li *ngIf="stat.categoryId === statCatgegory.id && statValues[stat.id]">
+                    {{stat.name}}: {{statValues[stat.id]}}
+                </li>
+            </ng-container>
+        </ul>
+    </li>
+</ul>

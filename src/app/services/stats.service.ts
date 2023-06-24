@@ -48,14 +48,7 @@ export class StatsService {
   }
 
   getStatValues(): any {
-    let statValues = this.getItem('statValues', {});
-    this.getStats().forEach(stat => {
-      if (!statValues[stat.id]) {
-        statValues[stat.id] = stat.badValue;
-      }
-    })
-
-    return statValues;
+    return this.getItem('statValues', {});
   }
 
   setStatValues(newValues: any): void {

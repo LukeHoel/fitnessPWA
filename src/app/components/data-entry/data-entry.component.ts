@@ -9,12 +9,12 @@ import { StatsService } from 'src/app/services/stats.service';
 export class DataEntryComponent {
   statCategories: any[];
   stats: any[];
-
   statValues: any = {};
 
   constructor(private statsService: StatsService) {
     this.statCategories = statsService.getStatCategories();
     this.stats = statsService.getStats();
+    this.statValues = statsService.getStatValues();
   }
 
   save(): void {
