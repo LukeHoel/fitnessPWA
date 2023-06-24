@@ -19,11 +19,8 @@ jobs:
 
     - name: Build
       run: npm run build:prod
-
-    - name: Deploy
+    - name: Deploy 🚀
       if: success()
-      uses: peaceiris/actions-gh-pages@v3
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: dist/fitness-pwa
-        enable_jekyll: true
+        folder: dist/fitness-pwa
